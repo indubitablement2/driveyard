@@ -81,7 +81,7 @@ pub unsafe trait Columns: Fields {
 /// elements of type `T`, but with multiple adjacent arrays of `T`'s fields, shared in a single
 /// allocation.
 pub struct RawTable<T: Columns> {
-    pointers: T::Pointers,
+    pub pointers: T::Pointers,
     capacity: usize,
     _marker: PhantomData<T>,
 }
